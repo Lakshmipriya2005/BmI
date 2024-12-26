@@ -1,0 +1,131 @@
+/* Reset and body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the container */
+  align-items: center; /* Center the container vertically */
+  font-family: 'Arial', sans-serif;
+  background-color: #90a872; /* Light background color for contrast */
+}
+
+/* Main container for side-by-side layout */
+.container {
+  display: flex; /* Use flexbox to position elements side by side */
+  width: 80vw; /* Width of the entire container */
+  max-width: 1200px; /* Max width for larger screens */
+  height: 70vh; /* Adjust height as needed */
+  border-radius: 10px; /* Rounded corners for the main container */
+  overflow: hidden; /* Hide overflow for a cleaner look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow around the container */
+}
+
+/* Left image container */
+.image {
+  width: 50%; /* Occupies 50% of the container width */
+  height: 100%; /* Full height of the container */
+  background-image: url("./assets/bmi.jpg"); /* Background image */
+  background-position:cover; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 600px 500px;
+   /* Cover the entire area */
+}
+
+/* Right content container */
+.whole {
+  width: 50%; /* Occupies 50% of the container width */
+  height: 100%; /* Full height of the container */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+  border: 2px solid #00796b; /* Interactive border */
+  border-radius: 0 10px 10px 0; /* Rounded corners on the right */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  transition: transform 0.3s; /* Transition for hover effect */
+}
+
+/* Hover effect on right content */
+.whole:hover {
+  transform: scale(1.02); /* Slightly enlarge the container on hover */
+}
+
+/* Text styles */
+h1 {
+  color: #00796b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2em; /* Increased font size */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Input container styling */
+.inp {
+  width: 70%; /* Make input fields fill the container width */
+}
+
+/* Input field styles */
+input {
+  padding: 10px;
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transition for focus effect */
+  width: 100%; /* Makes input fields fill the container width */
+}
+
+input:focus {
+  outline: none;
+  border-color: #004d40; /* Darker border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 107, 0.5); /* Shadow effect on focus */
+}
+
+/* Button styles */
+button {
+  margin-right: 10px;
+  padding: 10px 15px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transition for hover */
+  width: 120px; /* Set a fixed width to maintain alignment */
+}
+
+button:hover {
+  background-color: #004d40; /* Darker background on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Reset the lift effect on click */
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5em; /* Increased font size for visibility */
+  color: #00796b;
+  border: 1px solid #00796b; /* Add border for distinction */
+  border-radius: 5px; /* Rounded corners for the result box */
+  padding: 10px;
+  background-color: rgba(0, 121, 107, 0.1); /* Light background for the result */
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
